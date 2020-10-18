@@ -1,0 +1,22 @@
+@font-face {
+	font-family: Montserrat-regular;
+	src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+	font-family: Montserrat-bold;
+	src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+
+.pin-top {
+  position: relative;
+}
+
+.pin-bottom {
+  position: relative;
+}
+
+.pinned {
+  position: fixed !important;
+}
+	  

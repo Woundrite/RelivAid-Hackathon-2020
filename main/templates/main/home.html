@@ -1,0 +1,261 @@
+{% load static %}
+<html lang="en">
+<head>
+    <link href="{% static 'main/fontawsm/css/all.min.css' %}" rel="stylesheet"> <!-- Font awesome -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->    
+    <title>RelivAid</title>
+    <div class="logo-icon">
+    </div>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: sans-serif;
+        }
+        header{
+        
+        background: url("{% static 'main/img/hero-bg.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        min-height: 1000px;
+        }
+        @media screen and (max-width: 670px){
+            header{
+              min-height: 500px;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #08080820" onload="getLocation()">
+    <header>
+        <nav class="nav-wrapper white" style="position: transform-translateY: 500px; trasnform-translateZ: 5%; background:purple;">
+            <div class="container tergetclass" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                <a href="" class="brand-logo black-text text-darken-4">RelivAid</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#" class="black-text text-darken-4">Contact Us</a></li>
+                    <li><a href="#" class="black-text text-darken-4">About</a></li>
+                    <li><a href="#" class="black-text text-darken-4">Help us</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <div class="main" style="transform: translateY(20vh) translateZ(-5px); padding-left: 10vh; padding-bottom: 10vh;">
+            <h1 class="white-text text-darken-4" style="font-size: 40px;">RelivAid</h1>
+            <div class="">
+                <div class="">
+                    <h5 class="white-text text-darken-4 " id="c1">Your city: Vadodara</h5>
+                </div>
+                <div class="">
+                    <h5 class="white-text text-darken-4" id="c2">Cases in your city:<strong>12393</strong></h5>
+                </div>
+                <div class="">
+                    <h5 class="white-text text-darken-4" id="c3">Cases in your state:<strong>120438</strong></h5>
+                </div>
+                <div class="">
+                    <h5 class="white-text text-darken-4" id="c4">Cases in your country: <strong>1332</strong></h5>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section container">
+        <div class="row">
+            <div class="col s12 15">
+                <h2 class="purple-text text-darken-4">What is our mission?</h2>
+                <strong><p class="black-text text-darken-4 " style = "font-size: 24px; text-transform: capitalize;" >Our aim is to provide world class social services to anyone anywhere for free
+                we want communities to stay, Healthy and happy. We do see the bigger picture of happiness and health of the entire humanity. We Provide:
+                </p></strong>
+                <a href="{% url 'camera' %}">
+                <div class="row" style="padding: 0vh; position: relative; transform: translateX(0vh);">
+                    <div class="card col s0" style="width: 37vh; height: 40vh; padding-left: 2vh">
+                        <div class="card-image waves-effect waves-block waves-light" style="height: 20vh;">
+                            <img class="activator" src="{% static 'main/img/mask_home.jpg'%}">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4" >Mask Detection<i class="material-icons right">more_vert</i></span>
+                            <p><a href="">More details</a></p>
+                        </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Mask detection<i class="material-icons right">close</i></span>
+                                <p>This is a neural network that detects whether you have your mask on or not</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="{% url 'first_ques' %}">
+                    <div class="col s6" style="width: 5vh;"></div>
+                    <div class="card col s12" style="width: 37vh; height: 40vh;">
+                        <div class="card-image waves-effect waves-block waves-light" style="height: 20vh;">
+                            <img class="activator" src="{% static 'main/img/migrant_labourers.jpeg'%}">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Migrant Labourers<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">More details</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Migrant Labourers in need<i class="material-icons right">close</i></span>
+                            <p>You can help migrant workers by donating us or by reaching out to them yourself. This is also resolves trust issues between us,.</p>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="{% url 'medicine' %}">
+                    <div class="col s18" style="width: 5vh;"></div>
+                    <div class="card col s24" style="width: 37vh; height: 40vh">
+                        <div class="card-image waves-effect waves-block waves-light" style="height: 20vh;">
+                            <img class="activator" src="{% static 'main/img/medcine.png'%}">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4" >Buy Medicine<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">More details</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Get meds at low cost<i class="material-icons right">close</i></span>
+                            <p>We also offer high quality meds at low cost.We currently have all Medicines that provide relief against Covid 19.</p>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="section container">
+        <div class="row">
+            <div clas="col s12 15">
+                <h2 class="purple-text text-darken-4">Donate</h2>
+                <p class="black-text text-darken-4" style = "font-size: 24px; text-transform: capitalize;">Donating will help people in need during this adversity . It would be of great help to people with no bank balance, Many communities like the migrant workers need our help. Your help will get them beck on thier feet</p>
+                <div class="input-field col s12">
+                    <select>
+                      <option value="" disabled selected></option>
+                      <option value="1">$5</option>
+                      <option value="2">$10</option>
+                      <option value="3">$20</option>
+                    </select>
+                  </div>
+                  <label></label>
+                  <select class="browser-default">
+                    <option value="" disabled selected>Choose Value</option>
+                    <option value="1">$5</option>
+                    <option value="2">$20</option>
+                    <option value="3">$50</option>
+                  </select>
+                  <br>
+                  <button class="btn large dark orange" text-white><a href="">Donate</a></button>
+    </section>
+    <section class="section container" id="contact">
+        <div class="row">
+            <div clas="col s12 15">
+                <h2 class="purple-text text-darken-4">Contact us</h2>
+            </div>
+            <div class="col s12 15 offset-12">
+                <form action="">
+                    <div class="input-field">
+                        <i class="material material-icons prefix">email</i>
+                        <input type="email" id="email">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="message" class="materialize-textarea"></textarea>
+                        <label for="message">Your phone number</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="date" class="datepicker">
+                        <label for="date">Choose a Date</label>
+                    </div>
+                    <div class="input-field">
+                        <p>services required....</p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span> covid 19 checkup</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>Get advice</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="input-field center">
+                        <button class="btn large ">Submit</button>
+                    </div>
+                </form>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        let x;
+        let y;
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.materialboxed').materialbox();
+            $('.parallax').parallax();
+            $('select').material_select();
+            $('.datepicker').datepicker({
+           });
+        });
+        function getLocation(){
+            if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(savefunc);
+            } else { 
+            console.log("Geolocation is not supported by this browser.");
+            }
+        }
+        function savefunc(position){
+            x = position.coords.latitude;
+            y = position.coords.longitude;
+            let lat = x.toString();
+            let long = y.toString();
+            console.log(x);
+            console.log(y);
+            var _url = 'http://apis.mapmyindia.com/advancedmaps/v1/8t55eg24a3i5sjxsvea6numoqesihmt2/rev_geocode?lat='+lat+'&lng='+long;
+            $.ajax({
+            url: _url,
+            method: "GET",
+            data: {},
+            success: function(data){
+                x = Object.values(data);
+                xr = x[2];
+                xd = Object.values(xr);
+                i = xd[0];
+                if(i.city == "Vadodara"){
+                    a = document.getElementById("c1");
+                    a.innerHTML = "Your City: Vadodara";
+                    b = document.getElementById("c2");
+                    b.innerHTML = "Cases in your city: 27190";
+                    c = document.getElementById("c3");
+                    c.innerHTML = "Cases in Your State: 158635";
+                    d = document.getElementById("c4");
+                    d.innerHTML = "Cases in your Nation: 7432680";
+                } else if(i.city == "Kanpur"){
+                    a = document.getElementById("c1");
+                    a.innerHTML = "Your City: Kanpur";
+                    b = document.getElementById("c2");
+                    b.innerHTML = "Cases in your city: 14206";
+                    c = document.getElementById("c3");
+                    c.innerHTML = "Cases in Your State: 452660";
+                    d = document.getElementById("c4");
+                    d.innerHTML = "Cases in your Nation: 7432680";
+                }
+            }, error: function(error){
+                console.log(error);
+                console.log("error");
+            }
+        });}
+        $('.pushpin').each(function() {
+            var $this = $(this);
+            var $target = $('#' + $(this).attr('data-target'));
+            $this.pushpin({
+                top: $target.offset().top,
+                bottom: $target.offset().top + $target.outerHeight() - $this.height()
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->    
+    <title>Illumination Care</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: sans-serif;
+            
+        }
+        
+        @media screen and (max-width: 670px){
+            header{
+              min-height: 500px;
+            }
+        }
+
+        
+        
+    </style>
+</head>
+
+
+    <section class="section container" id="contact">
+        <div class="row">
+            <div clas="col s12 15">
+                <h2 class="purple-text text-darken-4">Login</h2>
+    
+            </div>
+            <div class="col s12 15 offset-12">
+              <form action="" method="POST">
+               {% csrf_token %}
+                    <div class="input-field">
+                        <i class="material material-icons prefix">message</i>
+                        <textarea id="message" class="materialize-textarea"></textarea>
+                        <label for="message">Name</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="message" class="materialize-textarea"></textarea>
+                        <label for="message">Addhar number</label>
+                    </div>
+                    
+                    
+                    <div class="input-field">
+                        <p>Few options</p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>Prefer to stay Anonymous</span>
+                            </label>
+                        </p>
+                        
+                         <p>
+                            <label>
+                                 <input type="checkbox">
+                                <span>Allow us to take your data</span>
+                            </label>
+                         </p>
+                            
+                    </div>
+                    <div class="input-field center">
+                        <button class="btn large light blue">Submit</button>
+                    </div>
+    
+                </form>
+        </div>
+    </section>
+            
+                
+                
+            
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.datepicker').datepicker({
+            
+
+           });
+        });
+    </script>
+</body>
+</html>
+
+
+    
+

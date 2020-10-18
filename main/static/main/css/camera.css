@@ -1,0 +1,84 @@
+@font-face {
+	font-family: Montserrat-regular;
+	src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+	font-family: Montserrat-bold;
+	src: url(../fonts/Montserrat-Bold.ttf);
+}
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: Montserrat-bold;
+}
+.cam-main-landing:before{
+    z-index: -1;
+    background: linear-gradient(rgba(0, 0, 0, 0.384),rgba(0, 0, 0, 0.384)),url('../img/mask.png');
+    background-size: cover;
+    background-position: center;
+    content: '';
+    position: absolute;
+    top:-20px;
+    bottom:-20px;
+    right:-20px;
+    left:-20px;
+    filter: blur(5px);
+}
+
+.cam-main-landing{
+    height:100vh;
+    position: relative;
+    overflow: hidden;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.cam-head{
+    font-family: Montserrat-bold;
+    font-size: 40px;
+    color: white;
+}
+.cam-main-butt{
+    padding: 20px 50px;
+    border-radius: 20px;
+    background: linear-gradient(to top right ,orangered, orange);
+    background-position: center;
+    color:white;
+    border:0px;
+    cursor:pointer;
+    transition: 0.4s;
+}
+.cam-main-butt:hover{
+    background-size:150%;
+}
+.cam-wrap{
+    position: fixed;
+    height:100vh;
+    bottom:calc(-100vh - 450px);
+    left:0px;
+    right: 0px;
+    background: white;
+    transition: 0.4s;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.cam-wrap:after{
+    content: '';
+    background: white;
+    position: absolute;
+    top: -300px;
+    transform: rotate(5deg);
+    right:-100px;
+    left:-100px;
+    height: 400px;
+}
+.cam-wrap.top{
+    bottom:0px;
+}
+#webcam-container{
+    border-radius: 10px;
+    background: rgb(238, 238, 238);
+}

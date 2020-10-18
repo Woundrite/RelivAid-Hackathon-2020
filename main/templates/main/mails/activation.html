@@ -1,0 +1,8 @@
+Hello {{ user }},
+We recieved a account activation request from this Email address. Please click on the link below to activate your account and continue your registration process.
+If this was not you then PLEASE DO NOT CLICK ON THE LINK AND DELETE THE MAIL IMMEDIATELY.
+
+To activate the account click on this link: http://{{ url }}{% url 'activation' uidb64=uid token=token %}
+
+Regards,
+Khush Golani
